@@ -3,7 +3,7 @@ package com.springboot.advanced_jpa.controller;
 import com.springboot.advanced_jpa.data.dto.ChangeProductNameDto;
 import com.springboot.advanced_jpa.data.dto.ProductDto;
 import com.springboot.advanced_jpa.data.dto.ProductResponseDto;
-import com.springboot.test.service.ProductService;
+import com.springboot.advanced_jpa.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

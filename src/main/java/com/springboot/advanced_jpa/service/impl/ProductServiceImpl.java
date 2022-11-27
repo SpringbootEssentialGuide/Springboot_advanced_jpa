@@ -1,10 +1,10 @@
-package com.springboot.test.service.impl;
+package com.springboot.advanced_jpa.service.impl;
 
 import com.springboot.advanced_jpa.data.dto.ProductDto;
 import com.springboot.advanced_jpa.data.dto.ProductResponseDto;
 import com.springboot.advanced_jpa.data.entity.Product;
 import com.springboot.advanced_jpa.data.repository.ProductRepository;
-import com.springboot.test.service.ProductService;
+import com.springboot.advanced_jpa.service.ProductService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
