@@ -20,16 +20,7 @@ import java.time.LocalDateTime;
 // @Table 어노테이션을 명시하지 않으면 테이블의 이름과 클래스의 이름이 동일하다는 의미이며,
 // 서로 다른 이름을 쓰려면 @Table(name = 값) 형태로 데이터베이스의 테이블명을 명시해야 합니다.
 // 대체로 자바의 명명법과 데이터베이스가 사용하는 명명법이 다르기 때문에 자주 사용됩니다.
-@Entity
-@Builder
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@EqualsAndHashCode
-@ToString(exclude = "name")
-@Table(name = "product")
-public class Product {
+
 
 //    Id
 //    엔티티 클래스의 필드는 테이블의 칼럼과 매핑됩니다. @Id 어노테이션이 선언된 필드는 테이블의 "기본값"
@@ -38,6 +29,17 @@ public class Product {
 //    GeneratedValue
 //    일반적으로 Id 어노테이션과 함께 사용됩니다. 이 어노테이션은 해당 필드의 값을 어떤 방식으로 자동으로 생성할지 결정할 때 사용합니다.
 //      값 생성 방식은 다음과 같습니다.
+
+// 예제 8.43
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
+@Table(name = "product")
+public class Product extends BaseEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long number;
@@ -51,7 +53,4 @@ public class Product {
     @Column(nullable = false)
     private Integer stock;
 
-    private LocalDateTime createdAt;
-
-    private LocalDateTime updatedAt;
 }
