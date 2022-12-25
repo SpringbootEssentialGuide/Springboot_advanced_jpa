@@ -21,6 +21,7 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     public ProductServiceImpl(ProductRepository productRepository) {
         this.productRepository = productRepository;
+        System.out.println("ProductServiceImpl() Autowired 호출됨!!!");
     }
 
 

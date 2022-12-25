@@ -18,6 +18,7 @@ public class ProductController {
     @Autowired
     public ProductController(ProductService productService) {
         this.productService = productService;
+        System.out.println("ProductController() Autowired 호출됨!!!");
     }
 
     @GetMapping()
